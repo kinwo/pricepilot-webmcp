@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "PricePilot — Agentic Price Discovery",
-    short_name: "PricePilot",
+    name: "LightningPricePilot — Agentic Price Discovery",
+    short_name: "LightningPricePilot",
     description: "Discover, negotiate, group-buy, and subscribe to fair laptop prices with WebMCP.",
     start_url: "/",
     scope: "/",

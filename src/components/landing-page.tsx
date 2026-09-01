@@ -10,11 +10,11 @@ import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 
-function SuperPricePilotLogo({ className = "" }: { className?: string }) {
+function LightningPricePilotLogo({ className = "" }: { className?: string }) {
   return (
     <Link
       href="/"
-      aria-label="SuperPricePilot home"
+      aria-label="LightningPricePilot home"
       className={`group inline-flex items-center gap-3 text-[var(--navy)] ${className}`}
     >
       <span className="relative grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-[0.9rem] shadow-[0_10px_24px_rgba(19,34,56,0.18)] transition-transform duration-200 group-hover:-rotate-3 group-hover:scale-105">
@@ -22,7 +22,7 @@ function SuperPricePilotLogo({ className = "" }: { className?: string }) {
       </span>
       <span className="font-display flex flex-col items-start leading-none">
         <span className="mb-1 text-[0.58rem] font-black uppercase tracking-[0.24em] text-[var(--coral)]">
-          Super
+          Lightning
         </span>
         <span className="text-xl font-extrabold tracking-[-0.045em]">
           Price<span className="text-[var(--coral)]">Pilot</span>
@@ -65,7 +65,7 @@ export function LandingPage() {
   return (
     <main className="min-h-screen overflow-hidden">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 sm:px-8">
-        <SuperPricePilotLogo />
+        <LightningPricePilotLogo />
         <div className="hidden items-center gap-2 rounded-full border border-[var(--line)] bg-white/65 px-4 py-2 text-xs font-semibold text-[var(--muted)] sm:flex">
           <span className="live-dot h-2 w-2 rounded-full bg-[var(--teal)]" />
           WebMCP competition prototype
@@ -169,7 +169,7 @@ export function LandingPage() {
       </section>
 
       <footer className="border-t border-[var(--line)] px-5 py-8 text-center text-sm text-[var(--muted)]">
-        <SuperPricePilotLogo className="justify-center" />
+        <LightningPricePilotLogo className="justify-center" />
         <p className="mt-3">A human-in-the-loop WebMCP prototype. All prices and orders are fictional.</p>
       </footer>
     </main>
