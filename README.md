@@ -98,3 +98,17 @@ Never commit either Neon connection string. The paid Render service stays awake;
 - Room codes isolate each user's state and can be shared across separate shopper and merchant agent sessions.
 - Shopper tools never receive private merchant floors or individual subscriber data.
 - A room can be reset to a known state at any time.
+
+## Inspiration
+
+The app's idea was inspired by my recent coffee brewing kettle buying experience. It wasn't a great experience trying to find a reasonable price after spending a couple of hours checking on Amazon and coffee equipment websites, only to realize the bargain price kettle I want in Amazon has target delivery date next year 2027 on the very final order payment page. My intent is to get it as soon as possible. Hence, it inspired me to create LightningPricePilot - a Two-sided Intent Market so that shopper can better communicate their intent to the merchant.
+
+## Author
+
+Crafted by Henry Chan. Made in Australia.
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE). Adapted
+third-party components and dependencies may carry additional notices or
+license terms.
