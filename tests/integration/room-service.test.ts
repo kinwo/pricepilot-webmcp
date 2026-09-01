@@ -1,8 +1,8 @@
 import { afterAll, describe, expect, it } from "vitest";
-import { inArray } from "drizzle-orm";
+import { eq, inArray } from "drizzle-orm";
 import { getDb, getPool } from "@/db/client";
 import { SHOWCASE_PRODUCT_ID } from "@/db/demo-data";
-import { rooms } from "@/db/schema";
+import { notifications, rooms } from "@/db/schema";
 import {
   createRoom,
   executeRoomAction,
@@ -57,11 +57,13 @@ describeWithDatabase("persisted room behavior", () => {
   it("matches subscriptions, persists notifications, and backfills SSE events", async () => {
     const code = await freshRoom();
     const before = (await getRoomSnapshot(code, "shopper")).latestEventId;
-    await executeRoomAction(code, "shopper", "subscribe_bargains", {
+    const subscription = await executeRoomAction(code, "shopper", "subscribe_bargains", {
       productId: SHOWCASE_PRODUCT_ID,
       condition: "excellent",
       targetPriceCents: 80_000
     });
+    expect(subscription.summary).toContain("$800");
+    expect(subscription.summary).not.toContain("cents");
 
     const liveEvent = new Promise<{ id: number; type: string }>((resolve) => {
       const unsubscribe = subscribeToRoom(code, (event) => {
@@ -83,7 +85,26 @@ describeWithDatabase("persisted room behavior", () => {
     expect((await liveEvent).type).toBe("bargain.published");
     const shopper = await getRoomSnapshot(code, "shopper");
     expect(shopper.notifications).toHaveLength(1);
-    expect(shopper.notifications[0]).toMatchObject({ read: false });
+    expect(shopper.notifications[0]).toMatchObject({
+      message: "A limited refurbished batch is ready. Price: $790; 3 available.",
+      read: false
+    });
+
+    const [storedNotification] = await getDb()
+      .select({ id: notifications.id, message: notifications.message })
+      .from(notifications)
+      .where(eq(notifications.id, shopper.notifications[0].id));
+    expect(storedNotification.message).toContain("Price: $790");
+
+    await getDb()
+      .update(notifications)
+      .set({ message: "A limited refurbished batch is ready. Price: 79000 cents; 3 available." })
+      .where(eq(notifications.id, storedNotification.id));
+    const legacyShopper = await getRoomSnapshot(code, "shopper");
+    expect(legacyShopper.notifications[0].message).toBe(
+      "A limited refurbished batch is ready. Price: $790; 3 available."
+    );
+
     const backlog = await getOutboxAfter(code, before);
     expect(backlog.some((event) => event.type === "bargain.published")).toBe(true);
   });
@@ -95,6 +116,8 @@ describeWithDatabase("persisted room behavior", () => {
       condition: "excellent",
       targetPriceCents: 80_000
     });
+    expect(offer.summary).toContain("$");
+    expect(offer.summary).not.toContain("cents");
     const offerId = (offer.data as { offerId: string }).offerId;
     const orders = await Promise.all([
       executeRoomAction(code, "shopper", "prepare_mock_checkout", { offerId }),
