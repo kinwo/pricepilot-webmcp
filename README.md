@@ -14,6 +14,14 @@ The app intentionally has no embedded model and no OpenAI API key. Open the depl
 - Vitest and Playwright
 - Render paid `1c-2g` web compute
 
+## Architecture
+
+![Architecture](docs/architecture.png)
+
+- [Diagram - Two-sided bargain loop](docs/two-sided-bargain-loop.png)
+- [Diagram - Actors](docs/actors.png)
+- [Diagram - Use case](docs/use-case.png)
+
 ## Local setup
 
 1. Create a Neon project and copy both connection strings:
@@ -90,4 +98,3 @@ Never commit either Neon connection string. The paid Render service stays awake;
 - Room codes isolate each judge's state and can be shared across separate shopper and merchant agent sessions.
 - Shopper tools never receive private merchant floors or individual subscriber data.
 - A room can be reset to a known state at any time.
-
