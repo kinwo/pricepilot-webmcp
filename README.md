@@ -95,6 +95,6 @@ Never commit either Neon connection string. The paid Render service stays awake;
 
 - All products, prices, bargains, and orders are fictional.
 - No login, payment, personal information, email, or push service is used.
-- Room codes isolate each judge's state and can be shared across separate shopper and merchant agent sessions.
+- Room codes isolate each user's state and can be shared across separate shopper and merchant agent sessions.
 - Shopper tools never receive private merchant floors or individual subscriber data.
 - A room can be reset to a known state at any time.
