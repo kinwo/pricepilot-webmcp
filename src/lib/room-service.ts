@@ -37,6 +37,7 @@ import {
   type PricingInput,
   type ProductCondition
 } from "./pricing";
+import { formatMoney } from "./utils";
 import type {
   AuditView,
   BargainView,
@@ -53,6 +54,7 @@ type DbExecutor = Pick<Database, "insert" | "select" | "delete" | "update">;
 
 const SHOPPER_KEY = "shopper-alex";
 const ROOM_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+const LEGACY_NOTIFICATION_PRICE_SUFFIX = / Price: (\d+) cents; (\d+) available\.$/;
 
 export class AppError extends Error {
   constructor(
@@ -72,6 +74,14 @@ function newRoomCode() {
 
 function asIso(value: Date | string) {
   return new Date(value).toISOString();
+}
+
+function formatNotificationMessage(message: string) {
+  return message.replace(
+    LEGACY_NOTIFICATION_PRICE_SUFFIX,
+    (_match, cents: string, available: string) =>
+      ` Price: ${formatMoney(Number(cents))}; ${available} available.`
+  );
 }
 
 function toEvent(row: typeof eventOutbox.$inferSelect): RoomEvent {
@@ -420,7 +430,7 @@ export async function getRoomSnapshot(rawCode: string, role: Role): Promise<Room
       productName: bargain ? productById.get(bargain.productId)?.name ?? bargain.productId : "Product",
       bargainId: notification.bargainId,
       title: notification.title,
-      message: notification.message,
+      message: formatNotificationMessage(notification.message),
       read: Boolean(notification.readAt),
       createdAt: asIso(notification.createdAt)
     };
@@ -632,7 +642,7 @@ export async function executeRoomAction(
     emitRoomEvent(toEvent(outcome.event));
     return {
       ok: true,
-      summary: `${context.product.name} ${negotiation.status === "accepted" ? "offer accepted" : "counteroffer ready"} at ${negotiation.offeredPriceCents} cents.`,
+      summary: `${context.product.name} ${negotiation.status === "accepted" ? "offer accepted" : "counteroffer ready"} at ${formatMoney(negotiation.offeredPriceCents)}.`,
       data: {
         offerId: outcome.offer.id,
         productId,
@@ -745,7 +755,7 @@ export async function executeRoomAction(
     emitRoomEvent(toEvent(outcome.event));
     return {
       ok: true,
-      summary: `Subscribed to ${outcome.product.name} bargains at or below ${targetPriceCents} cents.`,
+      summary: `Subscribed to ${outcome.product.name} bargains at or below ${formatMoney(targetPriceCents)}.`,
       data: { subscriptionId: outcome.subscription.id, productId, condition, targetPriceCents },
       nextActions: ["The merchant agent can now publish a matching bargain."]
     };
@@ -968,7 +978,7 @@ export async function executeRoomAction(
               subscriptionId: subscription.id,
               bargainId: bargain.id,
               title: `${context.product.name} hit your target`,
-              message: `${message} Price: ${priceCents} cents; ${bargainInventory} available.`
+              message: `${message} Price: ${formatMoney(priceCents)}; ${bargainInventory} available.`
             }))
           )
           .onConflictDoNothing();
