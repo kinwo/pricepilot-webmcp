@@ -164,7 +164,7 @@ export function LandingPage() {
         <p className="mx-auto mt-3 max-w-lg text-[var(--muted)]">Use a room code in another ChatGPT browser session to demonstrate shopper and merchant agents sharing live, isolated state.</p>
         <form onSubmit={enterRoom} className="mx-auto mt-7 flex max-w-md flex-col gap-3 sm:flex-row">
           <Input value={roomCode} onChange={(event) => setRoomCode(event.target.value)} placeholder="ABC123" maxLength={6} className="h-13 text-center font-mono text-lg font-bold uppercase tracking-[0.3em]" aria-label="Room code" />
-          <Button type="submit" size="lg">Enter room <FiArrowRight /></Button>
+          <Button type="submit" size="lg" className="shrink-0 whitespace-nowrap">Enter room <FiArrowRight /></Button>
         </form>
       </section>
 
