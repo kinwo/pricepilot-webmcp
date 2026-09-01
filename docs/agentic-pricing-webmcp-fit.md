@@ -1,18 +1,14 @@
 # Agentic Price Discovery and Negotiation — WebMCP Competition Fit
 
-The novel framing is not “an AI coupon finder.” It is a **two-sided intent market**: shopper agents publish private, structured buying intentions, while merchant agents respond with transparent, rule-bound offers.
+The novel framing is not “an AI coupon finder.” It is a **two-sided intent market**: shopper agents express structured buying intent, while merchant agents respond to aggregate demand with transparent, rule-bound offers.
 
 ## Why is this use case a strong fit for WebMCP?
 
-Product discovery and pricing involve live website state: inventory, product condition, eligibility rules, preorder dates, group-order progress, discount thresholds, and offer expiry. These details are difficult for an agent to understand reliably by reading page text or clicking through filters.
+Product discovery and pricing depend on live website state: condition-specific inventory, current and group-buy prices, group progress, active bargains, offer expiry, and merchant pricing policies. These details are difficult for an agent to understand reliably by reading page text or clicking through filters.
 
-WebMCP lets the storefront expose this information as precise actions. A shopper agent can discover every valid route to a better price—not only the current retail price, but refurbished stock, education pricing, preorder discounts, seasonal offers, group purchases, and future-sale subscriptions.
+WebMCP turns that state into precise, discoverable actions. On the shopper page, an agent can search the laptop catalogue, compare condition, group, and bargain price paths, request a rule-bound offer, join a group buy, save a target-price subscription, read bargain notifications, and prepare a mock checkout. On the merchant page, a different agent can review aggregate demand and offer activity, update private pricing guardrails, and publish or close limited bargains.
 
-The concept uses WebMCP on both sides:
-
-- The shopper-facing storefront exposes discovery, comparison, subscription, and commitment tools.
-- The merchant dashboard exposes aggregate-demand and bargain-publication tools.
-- A shared backend allows merchant agents to respond to demand without revealing individual shopper identities or private budgets.
+Each page registers only the tools appropriate to its role, with the room code already bound to every call. Both roles use the same validated room backend, so a shopper action can change aggregate demand and a merchant action can create a qualifying shopper notification without exposing the merchant’s private floor through the shopper tool surface.
 
 This transforms the storefront from a static catalogue into a structured negotiation space for people, shopper agents, and merchant agents.
 
@@ -20,76 +16,70 @@ This transforms the storefront from a static catalogue into a structured negotia
 
 The shopper describes the outcome once:
 
-> “I want this laptop or an equivalent model under $800. Refurbished is acceptable, I qualify for education pricing, and I can wait six weeks.”
+> “Find me a lightweight laptop under $900. Excellent refurbished condition is acceptable. Compare every available price path and negotiate toward $800 if sensible.”
 
-The agent then presents understandable price paths rather than another long list of products:
+The agent can then present understandable options instead of another long list of products:
 
-- Buy a refurbished unit now
-- Verify eligibility for an education discount
-- Join a group order that unlocks a lower price at 20 buyers
-- Preorder for later delivery
-- Wait for a seasonal promotion
-- Subscribe to future qualifying offers
+- Buy at the current price for the selected condition
+- Join a group buy and show how many more commitments would unlock its next discount
+- Use an active, inventory-limited merchant bargain
+- Request a ten-minute offer or transparent counteroffer within the merchant’s private guardrails
+- Save the product, acceptable condition, and target price for a future bargain
 
-Every offer explains why the price is available, what trade-off it requires, when it expires, and whether the shopper is making a commitment.
+Every price path states why it is available, whether it is currently unlocked, and what the shopper must do next. Offers include their rationale and expiry. Joining a group, saving a subscription, and placing the fictional mock order pause for visible human approval.
 
-The shopper no longer needs to repeatedly revisit the store, search for coupon codes, compare several product conditions, or monitor a group-buy threshold. The agent does the repetitive work, while the shopper retains control over preferences, privacy, notifications, and purchases.
+The shopper no longer needs to repeatedly search the catalogue, compare product conditions, monitor group progress, or refresh the page looking for a relevant bargain. Matching merchant bargains create persisted in-app notifications, while server-sent events update the open room live.
 
-Merchants also gain a better experience: they can convert refurbished inventory, measure unmet demand, test preorder interest, and offer volume discounts without manually negotiating with every customer.
+Merchants gain a complementary experience: they can see group commitments, subscriber counts, average target prices, and offer volume; tune the private floor and discount limits; and publish limited bargains that are matched against saved shopper intent. They do this without receiving a list of individual shopper budgets.
 
 ## What can people and agents do together that was difficult before?
 
-People are good at expressing preferences and making trade-offs:
+People remain responsible for the important trade-offs:
 
-- Whether refurbished condition is acceptable
-- How long they can wait
-- Whether they want to disclose eligibility
-- Whether they are comfortable joining a group order
-- Whether the final offer is worth accepting
+- Which laptop condition is acceptable
+- What target price is worthwhile
+- Whether to join a non-binding group buy
+- Whether to save buying intent in the room
+- Whether to complete a fictional checkout
+- On the merchant side, whether to change pricing policy or publish or close a bargain
 
-Agents are good at continuously comparing structured possibilities:
+Agents handle the structured, repetitive work:
 
-- Searching equivalent products
-- Monitoring inventory and offer changes
-- Comparing discount programs
-- Tracking group-order progress
-- Requesting offers within merchant-defined limits
-- Watching for future bargains
+- Search products by need, use case, condition, and budget
+- Compare current condition, unlocked group, and active bargain prices
+- Request an accepted offer or explain a policy-bound counteroffer
+- Retrieve relevant bargain notifications
+- Summarize aggregate demand and recent offer outcomes
+- Turn a demand signal into a proposed limited bargain
 
-Merchant agents can examine anonymous, aggregated demand and publish offers such as:
+For example, the merchant agent can see that a product has five group commitments, three bargain subscribers, an aggregate average target, and recent offer activity. It can propose a price, condition, inventory allocation, expiry, and shopper-facing message. The merchant reviews the action before publication; matching subscribers then receive an in-app notification that the shopper agent can retrieve and explain.
 
-> “Thirty-two opted-in shoppers want this model below $750. Offer a $729 group price if twenty buyers commit before Friday.”
-
-This creates something that was previously difficult: **asynchronous negotiation around durable buyer intent**. Shoppers do not need to be browsing when a deal becomes possible. Their opted-in agent remains represented through a subscription, the merchant agent can respond when inventory or demand changes, and the shopper returns only when there is a relevant offer to review.
-
-For fairness, demand is used to unlock lower group prices—not to infer an individual’s willingness to pay or secretly charge different users different amounts.
+This creates something that was previously difficult: **asynchronous negotiation around durable buyer intent**. A shopper can save a condition and target price, leave the original search, and return to a persisted notification after a merchant publishes a qualifying bargain. Demand is used to unlock lower group prices and guide shared bargains—not to secretly calculate a different price for each shopper.
 
 ## How was WebMCP implemented?
 
-The proposed implementation uses two WebMCP-enabled web experiences.
+LitghtningPricePilot implements two role-specific WebMCP surfaces with `document.modelContext.registerTool`.
 
-The shopper storefront registers tools such as:
+The shopper page registers seven tools:
 
-- `search_products`
-- `get_price_options`
-- `request_rule_bound_offer`
-- `join_group_order`
-- `create_preorder`
-- `subscribe_to_bargains`
-- `get_new_bargains`
-- `accept_offer`
+- `search_products` — find up to five laptops by plain-language query, use case, condition, or maximum budget
+- `get_price_options` — compare the current condition price, group-buy path, and any active bargain for one laptop
+- `request_offer` — create a non-binding ten-minute accepted offer or counteroffer within merchant guardrails
+- `join_group_buy` — record the shopper’s non-binding group commitment and unlock a tier when its threshold is reached
+- `subscribe_bargains` — save a product, acceptable condition, and target price in the demo room
+- `get_notifications` — retrieve persisted bargain notifications, treating merchant-authored messages as untrusted content
+- `prepare_mock_checkout` — place a human-approved fictional order from a valid offer and decrement demo inventory
 
-The merchant dashboard registers tools such as:
+The merchant page registers five tools:
 
-- `get_aggregate_demand`
-- `create_group_price_tier`
-- `publish_bargain`
-- `close_offer`
+- `get_demand_summary` — return group commitments, subscriber counts, aggregate average targets, and offer counts
+- `get_offer_activity` — return recent accepted, countered, expired, and checked-out offers
+- `set_pricing_policy` — update the private floor, maximum instant discount, and five- and ten-buyer discounts
+- `publish_bargain` — publish a condition-specific, inventory-limited, expiring bargain and notify matching subscribers
+- `close_bargain` — stop an active bargain while preserving its notification and audit history
 
-Both experiences connect to a shared commerce backend containing product inventory, condition, merchant discount policies, price floors, group demand, subscriptions, and offer history.
+Each tool posts its role, action, and structured input to the room action API. The server validates the room, role-specific action allowlist, and input schema before running shared domain logic against the room’s persisted state. The deterministic pricing service enforces condition inventory, merchant floors, instant-discount limits, five- and ten-buyer group tiers, bargain inventory, and expiry.
 
-A deterministic pricing service enforces inventory limits, eligibility, minimum prices, expiry dates, and discount policies. Agents can explore and propose offers, but they cannot bypass these merchant rules.
+The WebMCP definitions mark read operations with `readOnlyHint`, mark merchant-authored notification content with `untrustedContentHint`, forward cancellation signals, and unregister when the page unmounts. Visible confirmation dialogs protect group joining, bargain subscriptions, mock checkout, pricing-policy changes, and bargain publication or closure.
 
-Because WebMCP operates while a storefront page is open, background alerts are handled by a separate subscription service. When a merchant agent publishes a qualifying bargain, that service sends an opted-in email or push notification. When the shopper returns, their agent uses WebMCP to retrieve the current offer and explain it.
-
-Any action that creates a commitment—joining a group, placing a preorder, or accepting an offer—requires explicit shopper confirmation. Every offer includes its reason, terms, expiry, and an audit record.
+All products, prices, offers, and orders are fictional. The prototype collects no payment or personal data, and the mock checkout is the only checkout behavior implemented.
