@@ -1043,6 +1043,12 @@ html&gt;body{padding:0}&lt;/style&gt;
       font-size: 14px;
     }
 
+    #agentic-pricing-explainer .ap-svg .ap-code {
+      fill: var(--foreground);
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+
     #agentic-pricing-explainer .ap-shopper {
       fill: color-mix(in srgb, var(--viz-series-1) 14%, transparent);
       stroke: var(--border);
@@ -1166,15 +1172,15 @@ html&gt;body{padding:0}&lt;/style&gt;
 
   &lt;div class=&quot;ap-head&quot;&gt;
     &lt;div&gt;
-      &lt;h2&gt;Agentic Price Discovery &amp;amp; Negotiation&lt;/h2&gt;
-      &lt;p class=&quot;text-muted&quot;&gt;Transparent offers shaped by condition, eligibility, timing and aggregate demand&lt;/p&gt;
+      &lt;h2&gt;PricePilot: two-sided agentic pricing&lt;/h2&gt;
+      &lt;p class=&quot;text-muted&quot;&gt;Role-specific WebMCP tools connect shopper and merchant browser agents to one live demo room&lt;/p&gt;
     &lt;/div&gt;
-    &lt;span class=&quot;viz-badge&quot;&gt;Shopper approves every commitment&lt;/span&gt;
+    &lt;span class=&quot;viz-badge&quot;&gt;7 shopper tools • 5 merchant tools&lt;/span&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;viz-controls&quot; role=&quot;group&quot; aria-label=&quot;Choose an agentic pricing diagram&quot;&gt;
     &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-ap-view=&quot;usecase&quot; aria-pressed=&quot;true&quot;&gt;Use case&lt;/button&gt;
-    &lt;button class=&quot;btn&quot; type=&quot;button&quot; data-ap-view=&quot;subscriptions&quot; aria-pressed=&quot;false&quot;&gt;Subscriptions&lt;/button&gt;
+    &lt;button class=&quot;btn&quot; type=&quot;button&quot; data-ap-view=&quot;subscriptions&quot; aria-pressed=&quot;false&quot;&gt;Live loop&lt;/button&gt;
     &lt;button class=&quot;btn&quot; type=&quot;button&quot; data-ap-view=&quot;actors&quot; aria-pressed=&quot;false&quot;&gt;Actors&lt;/button&gt;
     &lt;button class=&quot;btn&quot; type=&quot;button&quot; data-ap-view=&quot;architecture&quot; aria-pressed=&quot;false&quot;&gt;Architecture&lt;/button&gt;
   &lt;/div&gt;
@@ -1182,10 +1188,10 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;div class=&quot;sr-only&quot; aria-live=&quot;polite&quot; data-ap-live&gt;Use case diagram selected&lt;/div&gt;
 
   &lt;section class=&quot;ap-panel&quot; data-ap-panel=&quot;usecase&quot; aria-labelledby=&quot;ap-usecase-title&quot;&gt;
-    &lt;h3 id=&quot;ap-usecase-title&quot;&gt;From shopping intent to an approved deal&lt;/h3&gt;
-    &lt;svg class=&quot;ap-svg&quot; viewBox=&quot;0 0 920 380&quot; role=&quot;img&quot; aria-labelledby=&quot;ap-usecase-svg-title ap-usecase-svg-desc&quot;&gt;
-      &lt;title id=&quot;ap-usecase-svg-title&quot;&gt;Agentic pricing use case&lt;/title&gt;
-      &lt;desc id=&quot;ap-usecase-svg-desc&quot;&gt;A shopper defines product needs, an agent discovers eligible price paths, the storefront returns rule-bound offers, and the shopper approves an action.&lt;/desc&gt;
+    &lt;h3 id=&quot;ap-usecase-title&quot;&gt;Browser-agent shopping journey&lt;/h3&gt;
+    &lt;svg class=&quot;ap-svg&quot; viewBox=&quot;0 0 920 400&quot; role=&quot;img&quot; aria-labelledby=&quot;ap-usecase-svg-title ap-usecase-svg-desc&quot;&gt;
+      &lt;title id=&quot;ap-usecase-svg-title&quot;&gt;PricePilot shopper browser-agent journey&lt;/title&gt;
+      &lt;desc id=&quot;ap-usecase-svg-desc&quot;&gt;The shopper page registers seven role-scoped WebMCP tools. A browser agent discovers and invokes them to search, compare, negotiate, subscribe, join a group, read notifications, or prepare a human-approved mock checkout.&lt;/desc&gt;
       &lt;defs&gt;
         &lt;marker id=&quot;ap-arrow-flow&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;8&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto-start-reverse&quot;&gt;
           &lt;path d=&quot;M 0 0 L 10 5 L 0 10 z&quot; fill=&quot;var(--muted-foreground)&quot;&gt;&lt;/path&gt;
@@ -1197,55 +1203,55 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;path class=&quot;ap-arrow&quot; d=&quot;M690 138 H725&quot;&gt;&lt;/path&gt;
 
       &lt;rect class=&quot;ap-shopper&quot; x=&quot;15&quot; y=&quot;70&quot; width=&quot;205&quot; height=&quot;136&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;118&quot; y=&quot;106&quot; text-anchor=&quot;middle&quot;&gt;1. Express intent&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;118&quot; y=&quot;136&quot; text-anchor=&quot;middle&quot;&gt;Product • budget • timing&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;118&quot; y=&quot;160&quot; text-anchor=&quot;middle&quot;&gt;Condition • eligibility&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;118&quot; y=&quot;184&quot; text-anchor=&quot;middle&quot;&gt;“Best laptop under $800”&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;118&quot; y=&quot;106&quot; text-anchor=&quot;middle&quot;&gt;1. Ask the agent&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;118&quot; y=&quot;136&quot; text-anchor=&quot;middle&quot;&gt;Product • budget • condition&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;118&quot; y=&quot;160&quot; text-anchor=&quot;middle&quot;&gt;The shopper states the goal once&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;118&quot; y=&quot;184&quot; text-anchor=&quot;middle&quot;&gt;in a browser-agent prompt&lt;/text&gt;
 
       &lt;rect class=&quot;ap-agent&quot; x=&quot;255&quot; y=&quot;70&quot; width=&quot;200&quot; height=&quot;136&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;355&quot; y=&quot;106&quot; text-anchor=&quot;middle&quot;&gt;2. Discover&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;355&quot; y=&quot;136&quot; text-anchor=&quot;middle&quot;&gt;Agent queries products,&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;355&quot; y=&quot;160&quot; text-anchor=&quot;middle&quot;&gt;deal programs and current&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;355&quot; y=&quot;184&quot; text-anchor=&quot;middle&quot;&gt;group demand&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;355&quot; y=&quot;106&quot; text-anchor=&quot;middle&quot;&gt;2. Page registers&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;355&quot; y=&quot;136&quot; text-anchor=&quot;middle&quot;&gt;The shopper route exposes&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;355&quot; y=&quot;160&quot; text-anchor=&quot;middle&quot;&gt;7 role-specific tools through&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;355&quot; y=&quot;184&quot; text-anchor=&quot;middle&quot;&gt;document.modelContext&lt;/text&gt;
 
       &lt;rect class=&quot;ap-price&quot; x=&quot;490&quot; y=&quot;42&quot; width=&quot;200&quot; height=&quot;192&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;590&quot; y=&quot;78&quot; text-anchor=&quot;middle&quot;&gt;3. Price paths&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;108&quot; text-anchor=&quot;middle&quot;&gt;Refurbished • pre-order&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;132&quot; text-anchor=&quot;middle&quot;&gt;Education • seasonal&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;156&quot; text-anchor=&quot;middle&quot;&gt;Group order • demand tier&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;180&quot; text-anchor=&quot;middle&quot;&gt;Future-sale registration&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;210&quot; text-anchor=&quot;middle&quot;&gt;Each offer shows why + expiry&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;590&quot; y=&quot;78&quot; text-anchor=&quot;middle&quot;&gt;3. Agent invokes&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;590&quot; y=&quot;110&quot; text-anchor=&quot;middle&quot;&gt;search_products&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;590&quot; y=&quot;135&quot; text-anchor=&quot;middle&quot;&gt;get_price_options&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;590&quot; y=&quot;160&quot; text-anchor=&quot;middle&quot;&gt;request_offer&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;590&quot; y=&quot;185&quot; text-anchor=&quot;middle&quot;&gt;get_notifications&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;214&quot; text-anchor=&quot;middle&quot;&gt;Structured results, not UI scraping&lt;/text&gt;
 
       &lt;rect class=&quot;ap-shopper&quot; x=&quot;725&quot; y=&quot;70&quot; width=&quot;180&quot; height=&quot;136&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;815&quot; y=&quot;106&quot; text-anchor=&quot;middle&quot;&gt;4. Approve&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;815&quot; y=&quot;136&quot; text-anchor=&quot;middle&quot;&gt;Buy • pre-order&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;815&quot; y=&quot;160&quot; text-anchor=&quot;middle&quot;&gt;Join group • watch sale&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;815&quot; y=&quot;184&quot; text-anchor=&quot;middle&quot;&gt;or decline&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;815&quot; y=&quot;106&quot; text-anchor=&quot;middle&quot;&gt;4. Human approves&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;815&quot; y=&quot;136&quot; text-anchor=&quot;middle&quot;&gt;join_group_buy&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;815&quot; y=&quot;160&quot; text-anchor=&quot;middle&quot;&gt;subscribe_bargains&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;815&quot; y=&quot;184&quot; text-anchor=&quot;middle&quot;&gt;prepare_mock_checkout&lt;/text&gt;
 
       &lt;path class=&quot;ap-spoke&quot; d=&quot;M590 234 V286 H815 V206&quot;&gt;&lt;/path&gt;
       &lt;polygon class=&quot;ap-gate&quot; points=&quot;815,270 829,284 815,298 801,284&quot;&gt;&lt;/polygon&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;332&quot; text-anchor=&quot;middle&quot;&gt;The agent can compare and request offers; only the shopper can commit&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;356&quot; text-anchor=&quot;middle&quot;&gt;Demand pricing uses aggregate demand—not inferred willingness to pay&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;332&quot; text-anchor=&quot;middle&quot;&gt;The browser agent discovers and calls only tools registered by the shopper page&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;356&quot; text-anchor=&quot;middle&quot;&gt;Visible approval gates stay with the shopper; calls are bound to the room and role&lt;/text&gt;
     &lt;/svg&gt;
 
-    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;Agentic pricing use case&quot;&gt;
+    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;PricePilot shopper browser-agent journey&quot;&gt;
       &lt;div class=&quot;ap-mobile-stack&quot;&gt;
-        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;1. Shopper expresses intent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Product, budget, timing, condition and optional eligibility&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;1. Shopper asks a browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;The prompt carries the product need, budget and condition&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-agent-node&quot;&gt;&lt;strong&gt;2. Agent discovers options&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Queries products, deal programs and current group demand&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-agent-node&quot;&gt;&lt;strong&gt;2. Shopper page registers 7 WebMCP tools&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;The browser agent discovers a role-scoped, room-bound tool surface&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-price-node&quot;&gt;&lt;strong&gt;3. Storefront returns transparent price paths&lt;/strong&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;Refurbished&lt;/span&gt;&lt;span&gt;Pre-order&lt;/span&gt;&lt;span&gt;Education&lt;/span&gt;&lt;span&gt;Seasonal&lt;/span&gt;&lt;span&gt;Group order&lt;/span&gt;&lt;span&gt;Demand tier&lt;/span&gt;&lt;span&gt;Sale alert&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓ Shopper approval&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;4. Shopper chooses&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Buy, pre-order, join a group, watch the sale or decline&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-price-node&quot;&gt;&lt;strong&gt;3. Agent invokes structured actions&lt;/strong&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;search_products&lt;/span&gt;&lt;span&gt;get_price_options&lt;/span&gt;&lt;span&gt;request_offer&lt;/span&gt;&lt;span&gt;get_notifications&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓ Human approval for commitments&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;4. Shopper approves or cancels&lt;/strong&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;join_group_buy&lt;/span&gt;&lt;span&gt;subscribe_bargains&lt;/span&gt;&lt;span&gt;prepare_mock_checkout&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/section&gt;
 
   &lt;section class=&quot;ap-panel&quot; data-ap-panel=&quot;subscriptions&quot; aria-labelledby=&quot;ap-subscriptions-title&quot; hidden&gt;
-    &lt;h3 id=&quot;ap-subscriptions-title&quot;&gt;Proactive bargain subscription loop&lt;/h3&gt;
+    &lt;h3 id=&quot;ap-subscriptions-title&quot;&gt;Two-sided bargain loop&lt;/h3&gt;
     &lt;svg class=&quot;ap-svg&quot; viewBox=&quot;0 0 920 510&quot; role=&quot;img&quot; aria-labelledby=&quot;ap-subscriptions-svg-title ap-subscriptions-svg-desc&quot;&gt;
-      &lt;title id=&quot;ap-subscriptions-svg-title&quot;&gt;Shopper subscription to future bargains&lt;/title&gt;
-      &lt;desc id=&quot;ap-subscriptions-svg-desc&quot;&gt;The shopper uses WebMCP on the storefront to save product interests. A merchant agent later publishes a bargain, a backend service matches the subscription and sends an alert, and the shopper returns to review the live offer.&lt;/desc&gt;
+      &lt;title id=&quot;ap-subscriptions-svg-title&quot;&gt;Shopper and merchant browser-agent bargain loop&lt;/title&gt;
+      &lt;desc id=&quot;ap-subscriptions-svg-desc&quot;&gt;The shopper and merchant pages each register different WebMCP tools for browser agents. Shopper intent becomes aggregate demand, a merchant agent publishes a qualifying bargain, and the shared room persists and streams the resulting notification.&lt;/desc&gt;
       &lt;defs&gt;
         &lt;marker id=&quot;ap-arrow-subscriptions&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;8&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto-start-reverse&quot;&gt;
           &lt;path d=&quot;M 0 0 L 10 5 L 0 10 z&quot; fill=&quot;var(--muted-foreground)&quot;&gt;&lt;/path&gt;
@@ -1255,73 +1261,75 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-subscriptions)&quot; d=&quot;M275 125 H345&quot;&gt;&lt;/path&gt;
       &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-subscriptions)&quot; d=&quot;M645 125 H575&quot;&gt;&lt;/path&gt;
       &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-subscriptions)&quot; d=&quot;M460 190 V232&quot;&gt;&lt;/path&gt;
-      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-subscriptions)&quot; d=&quot;M460 330 V374&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-subscriptions)&quot; d=&quot;M460 330 V362&quot;&gt;&lt;/path&gt;
       &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-subscriptions)&quot; d=&quot;M345 423 H255 V190&quot;&gt;&lt;/path&gt;
 
       &lt;rect class=&quot;ap-shopper&quot; x=&quot;40&quot; y=&quot;60&quot; width=&quot;235&quot; height=&quot;130&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;158&quot; y=&quot;96&quot; text-anchor=&quot;middle&quot;&gt;1. Shopper subscribes&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;158&quot; y=&quot;126&quot; text-anchor=&quot;middle&quot;&gt;Product • condition • target price&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;158&quot; y=&quot;151&quot; text-anchor=&quot;middle&quot;&gt;WebMCP saves consent and&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;158&quot; y=&quot;176&quot; text-anchor=&quot;middle&quot;&gt;interest criteria&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;158&quot; y=&quot;96&quot; text-anchor=&quot;middle&quot;&gt;1. Shopper agent&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;158&quot; y=&quot;126&quot; text-anchor=&quot;middle&quot;&gt;subscribe_bargains&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;158&quot; y=&quot;151&quot; text-anchor=&quot;middle&quot;&gt;Saves product, condition and&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;158&quot; y=&quot;176&quot; text-anchor=&quot;middle&quot;&gt;private target after approval&lt;/text&gt;
 
       &lt;rect class=&quot;ap-merchant&quot; x=&quot;645&quot; y=&quot;60&quot; width=&quot;235&quot; height=&quot;130&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
       &lt;text class=&quot;ap-title&quot; x=&quot;763&quot; y=&quot;96&quot; text-anchor=&quot;middle&quot;&gt;2. Merchant agent&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;763&quot; y=&quot;126&quot; text-anchor=&quot;middle&quot;&gt;Publishes a new eligible bargain&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;763&quot; y=&quot;151&quot; text-anchor=&quot;middle&quot;&gt;within inventory, margin and&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;763&quot; y=&quot;176&quot; text-anchor=&quot;middle&quot;&gt;discount rules&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;763&quot; y=&quot;126&quot; text-anchor=&quot;middle&quot;&gt;get_demand_summary&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;763&quot; y=&quot;151&quot; text-anchor=&quot;middle&quot;&gt;publish_bargain&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;763&quot; y=&quot;176&quot; text-anchor=&quot;middle&quot;&gt;Aggregate demand only&lt;/text&gt;
 
       &lt;rect class=&quot;ap-agent&quot; x=&quot;345&quot; y=&quot;70&quot; width=&quot;230&quot; height=&quot;120&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;107&quot; text-anchor=&quot;middle&quot;&gt;Web storefront&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;137&quot; text-anchor=&quot;middle&quot;&gt;Registers and manages the&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;162&quot; text-anchor=&quot;middle&quot;&gt;shopper&#x27;s saved interests&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;107&quot; text-anchor=&quot;middle&quot;&gt;Role-specific pages&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;137&quot; text-anchor=&quot;middle&quot;&gt;Both register WebMCP tools&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;162&quot; text-anchor=&quot;middle&quot;&gt;for their browser agents&lt;/text&gt;
 
       &lt;rect class=&quot;ap-price&quot; x=&quot;315&quot; y=&quot;232&quot; width=&quot;290&quot; height=&quot;98&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;269&quot; text-anchor=&quot;middle&quot;&gt;3. Subscription service&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;299&quot; text-anchor=&quot;middle&quot;&gt;Matches bargain events to opted-in shoppers&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;269&quot; text-anchor=&quot;middle&quot;&gt;3. Shared room service&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;296&quot; text-anchor=&quot;middle&quot;&gt;Enforces rules • matches subscriptions&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;317&quot; text-anchor=&quot;middle&quot;&gt;persists notifications • emits live events&lt;/text&gt;
 
-      &lt;rect class=&quot;ap-neutral&quot; x=&quot;345&quot; y=&quot;374&quot; width=&quot;230&quot; height=&quot;98&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;411&quot; text-anchor=&quot;middle&quot;&gt;4. Alert and return&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;441&quot; text-anchor=&quot;middle&quot;&gt;Shopper opens the live offer&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;463&quot; text-anchor=&quot;middle&quot;&gt;and approves or declines&lt;/text&gt;
+      &lt;rect class=&quot;ap-neutral&quot; x=&quot;345&quot; y=&quot;362&quot; width=&quot;230&quot; height=&quot;122&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;393&quot; text-anchor=&quot;middle&quot;&gt;4. Shopper follows up&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;460&quot; y=&quot;421&quot; text-anchor=&quot;middle&quot;&gt;get_notifications&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;460&quot; y=&quot;444&quot; text-anchor=&quot;middle&quot;&gt;request_offer&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;469&quot; text-anchor=&quot;middle&quot;&gt;Human approves mock checkout&lt;/text&gt;
 
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;500&quot; text-anchor=&quot;middle&quot;&gt;Background push comes from the subscription service; WebMCP resumes when the storefront opens&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;500&quot; text-anchor=&quot;middle&quot;&gt;The persisted notification also arrives live over SSE when the shopper page is open&lt;/text&gt;
     &lt;/svg&gt;
 
-    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;Proactive bargain subscription loop&quot;&gt;
+    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;Shopper and merchant browser-agent bargain loop&quot;&gt;
       &lt;div class=&quot;ap-mobile-stack&quot;&gt;
-        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;1. Shopper subscribes on the storefront&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;WebMCP saves product interests, price thresholds and notification consent&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;1. Shopper browser agent subscribes&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;The shopper page registers subscribe_bargains; the human approves the saved private target&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-merchant-node&quot;&gt;&lt;strong&gt;2. Merchant agent publishes a bargain&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;The offer stays inside inventory, margin and discount rules&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-merchant-node&quot;&gt;&lt;strong&gt;2. Merchant browser agent responds&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;The merchant page registers get_demand_summary and publish_bargain; only aggregate intent is exposed&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-price-node&quot;&gt;&lt;strong&gt;3. Subscription service matches and alerts&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Background notification is handled outside the page&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-price-node&quot;&gt;&lt;strong&gt;3. Shared room matches and notifies&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Pricing rules, inventory and expiry are enforced; the notification is persisted and streamed live&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-agent-node&quot;&gt;&lt;strong&gt;4. Shopper returns to the storefront&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;WebMCP retrieves the current offer; the shopper approves or declines&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-agent-node&quot;&gt;&lt;strong&gt;4. Shopper agent retrieves and acts&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;get_notifications and request_offer remain agent-usable; mock checkout still requires human approval&lt;/span&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
 
     &lt;div class=&quot;ap-boundary text-small&quot; aria-label=&quot;Subscription safeguards&quot;&gt;
-      &lt;span class=&quot;viz-badge&quot;&gt;Explicit opt-in&lt;/span&gt;
-      &lt;span class=&quot;viz-badge&quot;&gt;Product-level preferences&lt;/span&gt;
-      &lt;span class=&quot;viz-badge&quot;&gt;Easy unsubscribe&lt;/span&gt;
-      &lt;span class=&quot;viz-badge&quot;&gt;No automatic purchase&lt;/span&gt;
+      &lt;span class=&quot;viz-badge&quot;&gt;Human-approved mutations&lt;/span&gt;
+      &lt;span class=&quot;viz-badge&quot;&gt;Aggregate demand only&lt;/span&gt;
+      &lt;span class=&quot;viz-badge&quot;&gt;Role-isolated tools&lt;/span&gt;
+      &lt;span class=&quot;viz-badge&quot;&gt;No real payment&lt;/span&gt;
     &lt;/div&gt;
   &lt;/section&gt;
 
   &lt;section class=&quot;ap-panel&quot; data-ap-panel=&quot;actors&quot; aria-labelledby=&quot;ap-actors-title&quot; hidden&gt;
-    &lt;h3 id=&quot;ap-actors-title&quot;&gt;Actors and decision rights&lt;/h3&gt;
+    &lt;h3 id=&quot;ap-actors-title&quot;&gt;People, browser agents, and decision rights&lt;/h3&gt;
     &lt;svg class=&quot;ap-svg&quot; viewBox=&quot;0 0 920 500&quot; role=&quot;img&quot; aria-labelledby=&quot;ap-actors-svg-title ap-actors-svg-desc&quot;&gt;
-      &lt;title id=&quot;ap-actors-svg-title&quot;&gt;Agentic pricing actors&lt;/title&gt;
-      &lt;desc id=&quot;ap-actors-svg-desc&quot;&gt;The shopper, browser agent, merchant and pricing rules engine interact through the storefront, with optional eligibility and notification services.&lt;/desc&gt;
+      &lt;title id=&quot;ap-actors-svg-title&quot;&gt;PricePilot people and browser agents&lt;/title&gt;
+      &lt;desc id=&quot;ap-actors-svg-desc&quot;&gt;A shopper and merchant each work with a browser agent. The open shopper or merchant page registers only that role's WebMCP tools, while both roles share one validated room backend.&lt;/desc&gt;
 
-      &lt;path class=&quot;ap-spoke&quot; d=&quot;M460 248 L190 115&quot;&gt;&lt;/path&gt;
-      &lt;path class=&quot;ap-spoke&quot; d=&quot;M460 248 L730 115&quot;&gt;&lt;/path&gt;
-      &lt;path class=&quot;ap-spoke&quot; d=&quot;M460 248 L190 382&quot;&gt;&lt;/path&gt;
-      &lt;path class=&quot;ap-spoke&quot; d=&quot;M460 248 L730 382&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-spoke&quot; d=&quot;M315 176 L380 188&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-spoke&quot; d=&quot;M605 176 L540 188&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-spoke&quot; d=&quot;M315 321 L380 308&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-spoke&quot; d=&quot;M605 321 L540 308&quot;&gt;&lt;/path&gt;
 
       &lt;rect class=&quot;ap-neutral&quot; x=&quot;340&quot; y=&quot;188&quot; width=&quot;240&quot; height=&quot;120&quot; rx=&quot;14&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;227&quot; text-anchor=&quot;middle&quot;&gt;Web storefront&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;257&quot; text-anchor=&quot;middle&quot;&gt;Shared product, offer and&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;281&quot; text-anchor=&quot;middle&quot;&gt;commitment state&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;227&quot; text-anchor=&quot;middle&quot;&gt;PricePilot room&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;257&quot; text-anchor=&quot;middle&quot;&gt;Role-bound tools, shared state&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;281&quot; text-anchor=&quot;middle&quot;&gt;and deterministic pricing rules&lt;/text&gt;
 
       &lt;rect class=&quot;ap-shopper&quot; x=&quot;65&quot; y=&quot;54&quot; width=&quot;250&quot; height=&quot;122&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
       &lt;text class=&quot;ap-title&quot; x=&quot;190&quot; y=&quot;91&quot; text-anchor=&quot;middle&quot;&gt;Shopper&lt;/text&gt;
@@ -1329,117 +1337,125 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;text class=&quot;ap-small&quot; x=&quot;190&quot; y=&quot;146&quot; text-anchor=&quot;middle&quot;&gt;Approves every commitment&lt;/text&gt;
 
       &lt;rect class=&quot;ap-agent&quot; x=&quot;605&quot; y=&quot;54&quot; width=&quot;250&quot; height=&quot;122&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;730&quot; y=&quot;91&quot; text-anchor=&quot;middle&quot;&gt;Browser agent&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;730&quot; y=&quot;121&quot; text-anchor=&quot;middle&quot;&gt;Searches, compares and requests&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;730&quot; y=&quot;146&quot; text-anchor=&quot;middle&quot;&gt;offers through WebMCP&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;730&quot; y=&quot;91&quot; text-anchor=&quot;middle&quot;&gt;Shopper browser agent&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;730&quot; y=&quot;121&quot; text-anchor=&quot;middle&quot;&gt;Discovers and invokes 7 tools&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;730&quot; y=&quot;146&quot; text-anchor=&quot;middle&quot;&gt;registered by the shopper page&lt;/text&gt;
 
       &lt;rect class=&quot;ap-merchant&quot; x=&quot;65&quot; y=&quot;321&quot; width=&quot;250&quot; height=&quot;122&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;190&quot; y=&quot;358&quot; text-anchor=&quot;middle&quot;&gt;Merchant + merchant agent&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;190&quot; y=&quot;388&quot; text-anchor=&quot;middle&quot;&gt;Controls inventory and price limits&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;190&quot; y=&quot;413&quot; text-anchor=&quot;middle&quot;&gt;Publishes eligible bargains&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;190&quot; y=&quot;358&quot; text-anchor=&quot;middle&quot;&gt;Merchant&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;190&quot; y=&quot;388&quot; text-anchor=&quot;middle&quot;&gt;Controls private price limits&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;190&quot; y=&quot;413&quot; text-anchor=&quot;middle&quot;&gt;Approves policy and bargain changes&lt;/text&gt;
 
-      &lt;rect class=&quot;ap-price&quot; x=&quot;605&quot; y=&quot;321&quot; width=&quot;250&quot; height=&quot;122&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;730&quot; y=&quot;358&quot; text-anchor=&quot;middle&quot;&gt;Pricing rules engine&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;730&quot; y=&quot;388&quot; text-anchor=&quot;middle&quot;&gt;Evaluates condition, timing,&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;730&quot; y=&quot;413&quot; text-anchor=&quot;middle&quot;&gt;eligibility and aggregate demand&lt;/text&gt;
+      &lt;rect class=&quot;ap-agent&quot; x=&quot;605&quot; y=&quot;321&quot; width=&quot;250&quot; height=&quot;122&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;730&quot; y=&quot;358&quot; text-anchor=&quot;middle&quot;&gt;Merchant browser agent&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;730&quot; y=&quot;388&quot; text-anchor=&quot;middle&quot;&gt;Discovers and invokes 5 tools&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;730&quot; y=&quot;413&quot; text-anchor=&quot;middle&quot;&gt;registered by the merchant page&lt;/text&gt;
 
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;474&quot; text-anchor=&quot;middle&quot;&gt;Subscription service matches opted-in interests and returns shoppers to live offers&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;474&quot; text-anchor=&quot;middle&quot;&gt;Each browser agent sees only its page tools; the server validates role and action again&lt;/text&gt;
     &lt;/svg&gt;
 
-    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;Agentic pricing actors&quot;&gt;
+    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;PricePilot people and browser agents&quot;&gt;
       &lt;div class=&quot;ap-mobile-stack&quot;&gt;
         &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;Shopper&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Sets needs and approves every commitment&lt;/span&gt;&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-agent-node&quot;&gt;&lt;strong&gt;Browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Searches, compares and requests offers through WebMCP&lt;/span&gt;&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-merchant-node&quot;&gt;&lt;strong&gt;Merchant + merchant agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Controls price limits and publishes eligible bargains&lt;/span&gt;&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-price-node&quot;&gt;&lt;strong&gt;Pricing rules engine&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Evaluates condition, timing, eligibility and aggregate demand&lt;/span&gt;&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;Optional services&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Education verification, notifications and payments&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-agent-node&quot;&gt;&lt;strong&gt;Shopper browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Uses the 7 WebMCP tools registered by the shopper page&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-merchant-node&quot;&gt;&lt;strong&gt;Merchant&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Controls private guardrails and approves merchant mutations&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-agent-node&quot;&gt;&lt;strong&gt;Merchant browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Uses the 5 WebMCP tools registered by the merchant page&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-price-node&quot;&gt;&lt;strong&gt;Shared room and pricing service&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Validates roles, protects private targets, applies pricing rules and streams events&lt;/span&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/section&gt;
 
   &lt;section class=&quot;ap-panel&quot; data-ap-panel=&quot;architecture&quot; aria-labelledby=&quot;ap-architecture-title&quot; hidden&gt;
-    &lt;h3 id=&quot;ap-architecture-title&quot;&gt;High-level architecture&lt;/h3&gt;
-    &lt;svg class=&quot;ap-svg&quot; viewBox=&quot;0 0 920 610&quot; role=&quot;img&quot; aria-labelledby=&quot;ap-architecture-svg-title ap-architecture-svg-desc&quot;&gt;
-      &lt;title id=&quot;ap-architecture-svg-title&quot;&gt;Agentic pricing architecture&lt;/title&gt;
-      &lt;desc id=&quot;ap-architecture-svg-desc&quot;&gt;A shopper and browser agent use the storefront. WebMCP tools connect to product discovery, pricing and commitment services backed by commerce data and optional external providers.&lt;/desc&gt;
+    &lt;h3 id=&quot;ap-architecture-title&quot;&gt;Runtime WebMCP architecture&lt;/h3&gt;
+    &lt;svg class=&quot;ap-svg&quot; viewBox=&quot;0 0 920 760&quot; role=&quot;img&quot; aria-labelledby=&quot;ap-architecture-svg-title ap-architecture-svg-desc&quot;&gt;
+      &lt;title id=&quot;ap-architecture-svg-title&quot;&gt;PricePilot two-sided WebMCP architecture&lt;/title&gt;
+      &lt;desc id=&quot;ap-architecture-svg-desc&quot;&gt;The shopper and merchant routes independently register their role-specific WebMCP tools with document.modelContext. Browser agents discover and invoke those tools, which use a role-bound action API and shared room service.&lt;/desc&gt;
       &lt;defs&gt;
         &lt;marker id=&quot;ap-arrow-architecture&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;8&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto-start-reverse&quot;&gt;
           &lt;path d=&quot;M 0 0 L 10 5 L 0 10 z&quot; fill=&quot;var(--muted-foreground)&quot;&gt;&lt;/path&gt;
         &lt;/marker&gt;
       &lt;/defs&gt;
 
-      &lt;rect class=&quot;ap-shopper&quot; x=&quot;80&quot; y=&quot;20&quot; width=&quot;280&quot; height=&quot;72&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;220&quot; y=&quot;50&quot; text-anchor=&quot;middle&quot;&gt;Shopper&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;220&quot; y=&quot;75&quot; text-anchor=&quot;middle&quot;&gt;Visible comparison and approval UI&lt;/text&gt;
+      &lt;rect class=&quot;ap-shopper&quot; x=&quot;55&quot; y=&quot;20&quot; width=&quot;340&quot; height=&quot;76&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;225&quot; y=&quot;50&quot; text-anchor=&quot;middle&quot;&gt;Shopper + browser agent&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;225&quot; y=&quot;77&quot; text-anchor=&quot;middle&quot;&gt;Agent discovers and invokes shopper tools&lt;/text&gt;
 
-      &lt;rect class=&quot;ap-agent&quot; x=&quot;560&quot; y=&quot;20&quot; width=&quot;280&quot; height=&quot;72&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;700&quot; y=&quot;50&quot; text-anchor=&quot;middle&quot;&gt;Browser agent&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;700&quot; y=&quot;75&quot; text-anchor=&quot;middle&quot;&gt;Discovers and invokes page tools&lt;/text&gt;
+      &lt;rect class=&quot;ap-merchant&quot; x=&quot;525&quot; y=&quot;20&quot; width=&quot;340&quot; height=&quot;76&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;695&quot; y=&quot;50&quot; text-anchor=&quot;middle&quot;&gt;Merchant + browser agent&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;695&quot; y=&quot;77&quot; text-anchor=&quot;middle&quot;&gt;Agent discovers and invokes merchant tools&lt;/text&gt;
 
-      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M220 92 V122 H420&quot;&gt;&lt;/path&gt;
-      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M700 92 V122 H500&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M225 96 V126&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M695 96 V126&quot;&gt;&lt;/path&gt;
 
-      &lt;rect class=&quot;ap-neutral&quot; x=&quot;55&quot; y=&quot;122&quot; width=&quot;810&quot; height=&quot;80&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;95&quot; y=&quot;154&quot;&gt;Storefront experience&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;95&quot; y=&quot;181&quot;&gt;Product discovery&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;345&quot; y=&quot;181&quot;&gt;Offer comparison&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;595&quot; y=&quot;181&quot;&gt;Group progress&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;825&quot; y=&quot;181&quot; text-anchor=&quot;end&quot;&gt;Approval UI&lt;/text&gt;
+      &lt;rect class=&quot;ap-neutral&quot; x=&quot;55&quot; y=&quot;126&quot; width=&quot;340&quot; height=&quot;92&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;225&quot; y=&quot;158&quot; text-anchor=&quot;middle&quot;&gt;Shopper route&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;225&quot; y=&quot;184&quot; text-anchor=&quot;middle&quot;&gt;/room/{code}/shopper&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;225&quot; y=&quot;207&quot; text-anchor=&quot;middle&quot;&gt;Registers 7 tools with document.modelContext&lt;/text&gt;
 
-      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M460 202 V232&quot;&gt;&lt;/path&gt;
+      &lt;rect class=&quot;ap-neutral&quot; x=&quot;525&quot; y=&quot;126&quot; width=&quot;340&quot; height=&quot;92&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;695&quot; y=&quot;158&quot; text-anchor=&quot;middle&quot;&gt;Merchant route&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;695&quot; y=&quot;184&quot; text-anchor=&quot;middle&quot;&gt;/room/{code}/merchant&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;695&quot; y=&quot;207&quot; text-anchor=&quot;middle&quot;&gt;Registers 5 tools with document.modelContext&lt;/text&gt;
 
-      &lt;rect class=&quot;ap-agent&quot; x=&quot;55&quot; y=&quot;232&quot; width=&quot;810&quot; height=&quot;104&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;95&quot; y=&quot;263&quot;&gt;WebMCP tool layer&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;95&quot; y=&quot;296&quot;&gt;search_products&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;255&quot; y=&quot;296&quot;&gt;get_price_options&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;445&quot; y=&quot;296&quot;&gt;request_offer&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;600&quot; y=&quot;296&quot;&gt;join_group&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;825&quot; y=&quot;296&quot; text-anchor=&quot;end&quot;&gt;preorder • subscribe_bargains&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;322&quot; text-anchor=&quot;middle&quot;&gt;Join, pre-order and alert actions require shopper confirmation&lt;/text&gt;
+      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M225 218 V248&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M695 218 V248&quot;&gt;&lt;/path&gt;
 
-      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M460 336 V366&quot;&gt;&lt;/path&gt;
+      &lt;rect class=&quot;ap-shopper&quot; x=&quot;55&quot; y=&quot;248&quot; width=&quot;400&quot; height=&quot;194&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;80&quot; y=&quot;280&quot;&gt;Shopper WebMCP surface (7)&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;80&quot; y=&quot;312&quot;&gt;search_products&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;260&quot; y=&quot;312&quot;&gt;get_price_options&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;80&quot; y=&quot;342&quot;&gt;request_offer&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;260&quot; y=&quot;342&quot;&gt;join_group_buy&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;80&quot; y=&quot;372&quot;&gt;subscribe_bargains&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;260&quot; y=&quot;372&quot;&gt;get_notifications&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;80&quot; y=&quot;402&quot;&gt;prepare_mock_checkout&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;80&quot; y=&quot;428&quot;&gt;Mutating commitments open visible approval UI&lt;/text&gt;
 
-      &lt;rect class=&quot;ap-price&quot; x=&quot;55&quot; y=&quot;366&quot; width=&quot;810&quot; height=&quot;104&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;95&quot; y=&quot;397&quot;&gt;Commerce and pricing services&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;95&quot; y=&quot;430&quot;&gt;Catalog + condition&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;285&quot; y=&quot;430&quot;&gt;Discount eligibility&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;490&quot; y=&quot;430&quot;&gt;Negotiation rules&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;665&quot; y=&quot;430&quot;&gt;Group demand&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;825&quot; y=&quot;430&quot; text-anchor=&quot;end&quot;&gt;Subscriptions&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;456&quot; text-anchor=&quot;middle&quot;&gt;Deterministic seller limits: floor price • expiry • inventory • discount policy&lt;/text&gt;
+      &lt;rect class=&quot;ap-merchant&quot; x=&quot;465&quot; y=&quot;248&quot; width=&quot;400&quot; height=&quot;194&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;490&quot; y=&quot;280&quot;&gt;Merchant WebMCP surface (5)&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;490&quot; y=&quot;312&quot;&gt;get_demand_summary&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;680&quot; y=&quot;312&quot;&gt;get_offer_activity&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;490&quot; y=&quot;342&quot;&gt;set_pricing_policy&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;680&quot; y=&quot;342&quot;&gt;publish_bargain&lt;/text&gt;
+      &lt;text class=&quot;ap-code&quot; x=&quot;490&quot; y=&quot;372&quot;&gt;close_bargain&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;490&quot; y=&quot;402&quot;&gt;Agents receive aggregate demand, never private targets&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;490&quot; y=&quot;428&quot;&gt;Policy, publish and close actions require approval&lt;/text&gt;
 
-      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M460 470 V500&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M255 442 V476 H430&quot;&gt;&lt;/path&gt;
+      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M665 442 V476 H490&quot;&gt;&lt;/path&gt;
 
-      &lt;rect class=&quot;ap-merchant&quot; x=&quot;55&quot; y=&quot;500&quot; width=&quot;810&quot; height=&quot;82&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;95&quot; y=&quot;532&quot;&gt;Commerce data&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;95&quot; y=&quot;559&quot;&gt;Products + inventory&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;310&quot; y=&quot;559&quot;&gt;Price policies&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;495&quot; y=&quot;559&quot;&gt;Offers + groups&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;665&quot; y=&quot;559&quot;&gt;Subscriptions&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;825&quot; y=&quot;559&quot; text-anchor=&quot;end&quot;&gt;Audit log&lt;/text&gt;
+      &lt;rect class=&quot;ap-price&quot; x=&quot;55&quot; y=&quot;476&quot; width=&quot;810&quot; height=&quot;102&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;95&quot; y=&quot;508&quot;&gt;Approval UI + role-bound action API&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;95&quot; y=&quot;540&quot;&gt;Client requests human approval before protected tool execution&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;825&quot; y=&quot;540&quot; text-anchor=&quot;end&quot;&gt;Server validates role + input schema&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;566&quot; text-anchor=&quot;middle&quot;&gt;Pricing rules enforce floors • inventory • expiry • discounts • room isolation&lt;/text&gt;
 
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;604&quot; text-anchor=&quot;middle&quot;&gt;Merchant agent emits bargain events • notification service handles background delivery&lt;/text&gt;
+      &lt;path class=&quot;ap-arrow&quot; style=&quot;marker-end:url(#ap-arrow-architecture)&quot; d=&quot;M460 578 V608&quot;&gt;&lt;/path&gt;
+
+      &lt;rect class=&quot;ap-neutral&quot; x=&quot;55&quot; y=&quot;608&quot; width=&quot;810&quot; height=&quot;94&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;95&quot; y=&quot;640&quot;&gt;Shared demo room state + real-time events&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;95&quot; y=&quot;672&quot;&gt;Products • inventory • policies • offers • groups&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;825&quot; y=&quot;672&quot; text-anchor=&quot;end&quot;&gt;Subscriptions • notifications • audit • SSE&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;742&quot; text-anchor=&quot;middle&quot;&gt;Browser agents operate through registered page tools—not brittle UI automation&lt;/text&gt;
     &lt;/svg&gt;
 
-    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;Agentic pricing architecture&quot;&gt;
+    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;PricePilot two-sided WebMCP architecture&quot;&gt;
       &lt;div class=&quot;ap-mobile-stack&quot;&gt;
-        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;Shopper + browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Visible comparison, structured discovery and explicit approval&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;Shopper page → shopper browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;/room/{code}/shopper registers 7 discoverable, room-bound WebMCP tools&lt;/span&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;search_products&lt;/span&gt;&lt;span&gt;get_price_options&lt;/span&gt;&lt;span&gt;request_offer&lt;/span&gt;&lt;span&gt;join_group_buy&lt;/span&gt;&lt;span&gt;subscribe_bargains&lt;/span&gt;&lt;span&gt;get_notifications&lt;/span&gt;&lt;span&gt;prepare_mock_checkout&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↘ parallel role surfaces ↙&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-merchant-node&quot;&gt;&lt;strong&gt;Merchant page → merchant browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;/room/{code}/merchant registers 5 discoverable, room-bound WebMCP tools&lt;/span&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;get_demand_summary&lt;/span&gt;&lt;span&gt;get_offer_activity&lt;/span&gt;&lt;span&gt;set_pricing_policy&lt;/span&gt;&lt;span&gt;publish_bargain&lt;/span&gt;&lt;span&gt;close_bargain&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓ Human approval for protected mutations&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node ap-price-node&quot;&gt;&lt;strong&gt;Role-bound action API + pricing service&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Validates role and schema, then enforces floors, inventory, expiry, discounts and room isolation&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;Storefront experience&lt;/strong&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;Discovery&lt;/span&gt;&lt;span&gt;Offer comparison&lt;/span&gt;&lt;span&gt;Group progress&lt;/span&gt;&lt;span&gt;Approvals&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-agent-node&quot;&gt;&lt;strong&gt;WebMCP tool layer&lt;/strong&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;Search&lt;/span&gt;&lt;span&gt;Price options&lt;/span&gt;&lt;span&gt;Offer request&lt;/span&gt;&lt;span&gt;Join group&lt;/span&gt;&lt;span&gt;Pre-order&lt;/span&gt;&lt;span&gt;Sale alert&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓ Shopper confirms commitments&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-price-node&quot;&gt;&lt;strong&gt;Commerce and pricing services&lt;/strong&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;Catalog&lt;/span&gt;&lt;span&gt;Eligibility&lt;/span&gt;&lt;span&gt;Negotiation rules&lt;/span&gt;&lt;span&gt;Demand&lt;/span&gt;&lt;span&gt;Alerts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓&lt;/div&gt;
-        &lt;div class=&quot;ap-mobile-node ap-merchant-node&quot;&gt;&lt;strong&gt;Commerce data&lt;/strong&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;Inventory&lt;/span&gt;&lt;span&gt;Price policies&lt;/span&gt;&lt;span&gt;Offers&lt;/span&gt;&lt;span&gt;Groups&lt;/span&gt;&lt;span&gt;Watchlists&lt;/span&gt;&lt;span&gt;Audit&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;Shared room state + real-time events&lt;/strong&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;Products&lt;/span&gt;&lt;span&gt;Inventory&lt;/span&gt;&lt;span&gt;Policies&lt;/span&gt;&lt;span&gt;Offers&lt;/span&gt;&lt;span&gt;Groups&lt;/span&gt;&lt;span&gt;Subscriptions&lt;/span&gt;&lt;span&gt;Notifications&lt;/span&gt;&lt;span&gt;Audit&lt;/span&gt;&lt;span&gt;SSE&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;ap-boundary text-small&quot; aria-label=&quot;Pricing safeguards&quot;&gt;
-      &lt;span class=&quot;viz-badge&quot;&gt;Seller-defined price limits&lt;/span&gt;
-      &lt;span class=&quot;viz-badge&quot;&gt;Offer reason + expiry shown&lt;/span&gt;
-      &lt;span class=&quot;viz-badge&quot;&gt;Aggregate demand only&lt;/span&gt;
-      &lt;span class=&quot;viz-badge&quot;&gt;No automatic purchase&lt;/span&gt;
+    &lt;div class=&quot;ap-boundary text-small&quot; aria-label=&quot;WebMCP safeguards&quot;&gt;
+      &lt;span class=&quot;viz-badge&quot;&gt;Role-specific registration&lt;/span&gt;
+      &lt;span class=&quot;viz-badge&quot;&gt;Browser-agent discoverable&lt;/span&gt;
+      &lt;span class=&quot;viz-badge&quot;&gt;Human approval gates&lt;/span&gt;
+      &lt;span class=&quot;viz-badge&quot;&gt;Server-side validation&lt;/span&gt;
     &lt;/div&gt;
   &lt;/section&gt;
 
