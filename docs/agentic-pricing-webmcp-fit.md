@@ -58,7 +58,7 @@ This creates something that was previously difficult: **asynchronous negotiation
 
 ## How was WebMCP implemented?
 
-LitghtningPricePilot implements two role-specific WebMCP surfaces with `document.modelContext.registerTool`.
+LightningPricePilot implements two role-specific WebMCP surfaces with `document.modelContext.registerTool`.
 
 The shopper page registers seven tools:
 

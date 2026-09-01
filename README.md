@@ -1,6 +1,6 @@
-# LitghtningPricePilot — Agentic Price Discovery and Negotiation
+# LightningPricePilot — Agentic Price Discovery and Negotiation
 
-LitghtningPricePilot is a WebMCP-enabled laptop marketplace built for a Devpost competition. It lets a browser agent and a person collaborate across product discovery, refurbished pricing, policy-bound negotiation, group buying, bargain subscriptions, proactive merchant notifications, and a human-approved mock checkout.
+LightningPricePilot is a WebMCP-enabled laptop marketplace built for a Devpost competition. It lets a browser agent and a person collaborate across product discovery, refurbished pricing, policy-bound negotiation, group buying, bargain subscriptions, proactive merchant notifications, and a human-approved mock checkout.
 
 The app intentionally has no embedded model and no OpenAI API key. Open the deployed storefront in ChatGPT's WebMCP-capable browser; the page registers structured tools with `document.modelContext.registerTool`.
 
