@@ -1,4 +1,4 @@
-# PricePilot competition demo guide
+# LightningPricePilot competition demo guide
 
 ## Before recording or presenting
 

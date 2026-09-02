@@ -56,7 +56,7 @@ export function useWebMCP(roomCode: string, role: Role) {
                   const result = (await response.json()) as ToolResult & { error?: string };
                   if (!response.ok) {
                     result.ok = false;
-                    result.summary = result.error ?? result.summary ?? "The PricePilot action failed.";
+                    result.summary = result.error ?? result.summary ?? "The LightningPricePilot action failed.";
                   }
                   window.dispatchEvent(
                     new CustomEvent("pricepilot:action", {

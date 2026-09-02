@@ -1,0 +1,17 @@
+Online shopping is still mostly a one-way conversation. Shoppers search repeatedly, while merchants rarely see what people actually want. I built Lightning Price Pilot: a two-sided intent market where a shopper, a merchant, and their AI agents collaborate to discover a fair price.
+
+This is a Web M C P native laptop marketplace. The page exposes structured tools directly to ChatGPT, with product IDs, integer-cent prices, and clear read-versus-write semantics. The model never scrapes the interface, and the app has no embedded model or API key.
+
+I ask for a lightweight refurbished laptop under nine hundred dollars, comparing every price path and negotiating toward eight hundred. It finds the Aster Air thirteen and compares refurbished, group-buy, and live-bargain prices. Negotiation follows private merchant guardrails, returning an explainable offer or counteroffer without inventing a discount.
+
+Four shoppers have already joined the group. When the agent tries to add my commitment, Lightning Price Pilot pauses for my approval. I confirm, becoming the fifth buyer and unlocking eight percent off for everyone in the room. This is a visible, non-binding commitment, not an order, and the price changes deterministically to eight hundred eight dollars and sixty-eight cents.
+
+The group price is close, but my goal is eight hundred dollars. I save that target as a bargain subscription. My individual budget stays private; the merchant receives only an aggregate demand signal.
+
+Now I switch to the merchant workspace. Its separate Web M C P surface can review group commitments, subscriber counts, average targets, and offer activity, but never an individual shopper’s target. Based on this demand, the merchant agent proposes three excellent-condition units at seven hundred ninety dollars. Publishing is another write action, so it also requires human confirmation. Once approved, the offer is validated against the merchant’s private floor and published.
+
+Back in the shopper workspace, the matching bargain arrives in real time. The notification is delivered through server-sent events and persisted, so it survives a refresh. The agent can now reuse the best available price and creates a ten-minute offer at seven hundred ninety dollars, below my saved target.
+
+Checkout never happens silently. The tool waits while I review the exact item and price. After I approve, the app creates a fictional order and decrements inventory in one database transaction. No payment or personal data is collected.
+
+Lightning Price Pilot turns private intent into transparent group value, timely merchant action, and a safer agent-assisted purchase.

@@ -54,7 +54,7 @@ export function ApprovalProvider({ children }: { children: ReactNode }) {
             <DialogDescription>{pending?.description}</DialogDescription>
           </DialogHeader>
           <div className="rounded-2xl border border-[var(--line)] bg-white p-4 text-xs leading-5 text-[var(--muted)]">
-            You stay in control. PricePilot will wait here until you approve or cancel this action.
+            You stay in control. LightningPricePilot will wait here until you approve or cancel this action.
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => finish(false)}>Cancel</Button>

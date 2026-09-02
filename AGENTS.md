@@ -2,7 +2,7 @@
 
 ## Start Here
 
-PricePilot uses Next.js 16, TypeScript, Drizzle, Vitest, and Playwright. Use Node 24 (`.nvmrc`) with `npm ci`. Before submitting, run `npm run lint`, `npm run typecheck`, and `npm test`. Consult later sections as needed.
+LightningPricePilot uses Next.js 16, TypeScript, Drizzle, Vitest, and Playwright. Use Node 24 (`.nvmrc`) with `npm ci`. Before submitting, run `npm run lint`, `npm run typecheck`, and `npm test`. Consult later sections as needed.
 
 ## Find the Relevant Code
 

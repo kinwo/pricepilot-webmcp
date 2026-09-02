@@ -1,36 +1,13 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FiArrowRight, FiBell, FiCheck, FiCopy, FiSearch, FiUsers } from "react-icons/fi";
 import { TbRobot, TbScale, TbSparkles } from "react-icons/tb";
+import { Brand } from "./brand";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
-
-function LightningPricePilotLogo({ className = "" }: { className?: string }) {
-  return (
-    <Link
-      href="/"
-      aria-label="LightningPricePilot home"
-      className={`group inline-flex items-center gap-3 text-[var(--navy)] ${className}`}
-    >
-      <span className="relative grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-[0.9rem] shadow-[0_10px_24px_rgba(19,34,56,0.18)] transition-transform duration-200 group-hover:-rotate-3 group-hover:scale-105">
-        <Image src="/icon.svg" alt="" width={44} height={44} priority />
-      </span>
-      <span className="font-display flex flex-col items-start leading-none">
-        <span className="mb-1 text-[0.58rem] font-black uppercase tracking-[0.24em] text-[var(--coral)]">
-          Lightning
-        </span>
-        <span className="text-xl font-extrabold tracking-[-0.045em]">
-          Price<span className="text-[var(--coral)]">Pilot</span>
-        </span>
-      </span>
-    </Link>
-  );
-}
 
 export function LandingPage() {
   const router = useRouter();
@@ -65,7 +42,7 @@ export function LandingPage() {
   return (
     <main className="min-h-screen overflow-hidden">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 sm:px-8">
-        <LightningPricePilotLogo />
+        <Brand />
         <div className="hidden items-center gap-2 rounded-full border border-[var(--line)] bg-white/65 px-4 py-2 text-xs font-semibold text-[var(--muted)] sm:flex">
           <span className="live-dot h-2 w-2 rounded-full bg-[var(--teal)]" />
           WebMCP competition prototype
@@ -169,7 +146,7 @@ export function LandingPage() {
       </section>
 
       <footer className="border-t border-[var(--line)] px-5 py-8 text-center text-sm text-[var(--muted)]">
-        <LightningPricePilotLogo className="justify-center" />
+        <Brand className="justify-center" />
         <p className="mt-3">A human-in-the-loop WebMCP prototype. All prices and orders are fictional.</p>
       </footer>
     </main>

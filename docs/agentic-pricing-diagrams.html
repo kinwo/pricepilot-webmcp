@@ -1043,6 +1043,13 @@ html&gt;body{padding:0}&lt;/style&gt;
       font-size: 14px;
     }
 
+    #agentic-pricing-explainer .ap-svg .ap-eyebrow {
+      fill: var(--muted-foreground);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+    }
+
     #agentic-pricing-explainer .ap-svg .ap-code {
       fill: var(--foreground);
       font-family: var(--font-mono);
@@ -1172,7 +1179,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
   &lt;div class=&quot;ap-head&quot;&gt;
     &lt;div&gt;
-      &lt;h2&gt;PricePilot: two-sided agentic pricing&lt;/h2&gt;
+      &lt;h2&gt;LightningPricePilot: two-sided agentic pricing&lt;/h2&gt;
       &lt;p class=&quot;text-muted&quot;&gt;Role-specific WebMCP tools connect shopper and merchant browser agents to one live demo room&lt;/p&gt;
     &lt;/div&gt;
     &lt;span class=&quot;viz-badge&quot;&gt;7 shopper tools • 5 merchant tools&lt;/span&gt;
@@ -1190,7 +1197,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;section class=&quot;ap-panel&quot; data-ap-panel=&quot;usecase&quot; aria-labelledby=&quot;ap-usecase-title&quot;&gt;
     &lt;h3 id=&quot;ap-usecase-title&quot;&gt;Browser-agent shopping journey&lt;/h3&gt;
     &lt;svg class=&quot;ap-svg&quot; viewBox=&quot;0 0 920 400&quot; role=&quot;img&quot; aria-labelledby=&quot;ap-usecase-svg-title ap-usecase-svg-desc&quot;&gt;
-      &lt;title id=&quot;ap-usecase-svg-title&quot;&gt;PricePilot shopper browser-agent journey&lt;/title&gt;
+      &lt;title id=&quot;ap-usecase-svg-title&quot;&gt;LightningPricePilot shopper browser-agent journey&lt;/title&gt;
       &lt;desc id=&quot;ap-usecase-svg-desc&quot;&gt;The shopper page registers seven role-scoped WebMCP tools. A browser agent discovers and invokes them to search, compare, negotiate, subscribe, join a group, read notifications, or prepare a human-approved mock checkout.&lt;/desc&gt;
       &lt;defs&gt;
         &lt;marker id=&quot;ap-arrow-flow&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;8&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto-start-reverse&quot;&gt;
@@ -1234,7 +1241,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;text class=&quot;ap-small&quot; x=&quot;590&quot; y=&quot;356&quot; text-anchor=&quot;middle&quot;&gt;Visible approval gates stay with the shopper; calls are bound to the room and role&lt;/text&gt;
     &lt;/svg&gt;
 
-    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;PricePilot shopper browser-agent journey&quot;&gt;
+    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;LightningPricePilot shopper browser-agent journey&quot;&gt;
       &lt;div class=&quot;ap-mobile-stack&quot;&gt;
         &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;1. Shopper asks a browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;The prompt carries the product need, budget and condition&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↓&lt;/div&gt;
@@ -1318,7 +1325,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;section class=&quot;ap-panel&quot; data-ap-panel=&quot;actors&quot; aria-labelledby=&quot;ap-actors-title&quot; hidden&gt;
     &lt;h3 id=&quot;ap-actors-title&quot;&gt;People, browser agents, and decision rights&lt;/h3&gt;
     &lt;svg class=&quot;ap-svg&quot; viewBox=&quot;0 0 920 500&quot; role=&quot;img&quot; aria-labelledby=&quot;ap-actors-svg-title ap-actors-svg-desc&quot;&gt;
-      &lt;title id=&quot;ap-actors-svg-title&quot;&gt;PricePilot people and browser agents&lt;/title&gt;
+      &lt;title id=&quot;ap-actors-svg-title&quot;&gt;LightningPricePilot people and browser agents&lt;/title&gt;
       &lt;desc id=&quot;ap-actors-svg-desc&quot;&gt;A shopper and merchant each work with a browser agent. The open shopper or merchant page registers only that role's WebMCP tools, while both roles share one validated room backend.&lt;/desc&gt;
 
       &lt;path class=&quot;ap-spoke&quot; d=&quot;M315 176 L380 188&quot;&gt;&lt;/path&gt;
@@ -1327,9 +1334,10 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;path class=&quot;ap-spoke&quot; d=&quot;M605 321 L540 308&quot;&gt;&lt;/path&gt;
 
       &lt;rect class=&quot;ap-neutral&quot; x=&quot;340&quot; y=&quot;188&quot; width=&quot;240&quot; height=&quot;120&quot; rx=&quot;14&quot;&gt;&lt;/rect&gt;
-      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;227&quot; text-anchor=&quot;middle&quot;&gt;PricePilot room&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;257&quot; text-anchor=&quot;middle&quot;&gt;Role-bound tools, shared state&lt;/text&gt;
-      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;281&quot; text-anchor=&quot;middle&quot;&gt;and deterministic pricing rules&lt;/text&gt;
+      &lt;text class=&quot;ap-eyebrow&quot; x=&quot;460&quot; y=&quot;215&quot; text-anchor=&quot;middle&quot;&gt;LIGHTNING&lt;/text&gt;
+      &lt;text class=&quot;ap-title&quot; x=&quot;460&quot; y=&quot;237&quot; text-anchor=&quot;middle&quot;&gt;PricePilot room&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;265&quot; text-anchor=&quot;middle&quot;&gt;Role-bound tools, shared state&lt;/text&gt;
+      &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;289&quot; text-anchor=&quot;middle&quot;&gt;and deterministic pricing rules&lt;/text&gt;
 
       &lt;rect class=&quot;ap-shopper&quot; x=&quot;65&quot; y=&quot;54&quot; width=&quot;250&quot; height=&quot;122&quot; rx=&quot;12&quot;&gt;&lt;/rect&gt;
       &lt;text class=&quot;ap-title&quot; x=&quot;190&quot; y=&quot;91&quot; text-anchor=&quot;middle&quot;&gt;Shopper&lt;/text&gt;
@@ -1354,7 +1362,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;474&quot; text-anchor=&quot;middle&quot;&gt;Each browser agent sees only its page tools; the server validates role and action again&lt;/text&gt;
     &lt;/svg&gt;
 
-    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;PricePilot people and browser agents&quot;&gt;
+    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;LightningPricePilot people and browser agents&quot;&gt;
       &lt;div class=&quot;ap-mobile-stack&quot;&gt;
         &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;Shopper&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Sets needs and approves every commitment&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;ap-mobile-node ap-agent-node&quot;&gt;&lt;strong&gt;Shopper browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;Uses the 7 WebMCP tools registered by the shopper page&lt;/span&gt;&lt;/div&gt;
@@ -1368,7 +1376,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;section class=&quot;ap-panel&quot; data-ap-panel=&quot;architecture&quot; aria-labelledby=&quot;ap-architecture-title&quot; hidden&gt;
     &lt;h3 id=&quot;ap-architecture-title&quot;&gt;Runtime WebMCP architecture&lt;/h3&gt;
     &lt;svg class=&quot;ap-svg&quot; viewBox=&quot;0 0 920 760&quot; role=&quot;img&quot; aria-labelledby=&quot;ap-architecture-svg-title ap-architecture-svg-desc&quot;&gt;
-      &lt;title id=&quot;ap-architecture-svg-title&quot;&gt;PricePilot two-sided WebMCP architecture&lt;/title&gt;
+      &lt;title id=&quot;ap-architecture-svg-title&quot;&gt;LightningPricePilot two-sided WebMCP architecture&lt;/title&gt;
       &lt;desc id=&quot;ap-architecture-svg-desc&quot;&gt;The shopper and merchant routes independently register their role-specific WebMCP tools with document.modelContext. Browser agents discover and invoke those tools, which use a role-bound action API and shared room service.&lt;/desc&gt;
       &lt;defs&gt;
         &lt;marker id=&quot;ap-arrow-architecture&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;8&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto-start-reverse&quot;&gt;
@@ -1439,7 +1447,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;text class=&quot;ap-small&quot; x=&quot;460&quot; y=&quot;742&quot; text-anchor=&quot;middle&quot;&gt;Browser agents operate through registered page tools—not brittle UI automation&lt;/text&gt;
     &lt;/svg&gt;
 
-    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;PricePilot two-sided WebMCP architecture&quot;&gt;
+    &lt;div class=&quot;ap-mobile&quot; aria-label=&quot;LightningPricePilot two-sided WebMCP architecture&quot;&gt;
       &lt;div class=&quot;ap-mobile-stack&quot;&gt;
         &lt;div class=&quot;ap-mobile-node&quot;&gt;&lt;strong&gt;Shopper page → shopper browser agent&lt;/strong&gt;&lt;span class=&quot;text-muted&quot;&gt;/room/{code}/shopper registers 7 discoverable, room-bound WebMCP tools&lt;/span&gt;&lt;div class=&quot;ap-tags&quot;&gt;&lt;span&gt;search_products&lt;/span&gt;&lt;span&gt;get_price_options&lt;/span&gt;&lt;span&gt;request_offer&lt;/span&gt;&lt;span&gt;join_group_buy&lt;/span&gt;&lt;span&gt;subscribe_bargains&lt;/span&gt;&lt;span&gt;get_notifications&lt;/span&gt;&lt;span&gt;prepare_mock_checkout&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;div class=&quot;ap-mobile-arrow&quot; aria-hidden=&quot;true&quot;&gt;↘ parallel role surfaces ↙&lt;/div&gt;
