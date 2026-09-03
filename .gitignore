@@ -21,3 +21,4 @@
 *.pem
 *.log
 tsconfig.tsbuildinfo
+artifacts
